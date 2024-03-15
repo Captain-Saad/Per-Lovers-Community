@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pet Silhouette -->
+  <path d="M16 4C12.6863 4 10 6.68629 10 10C10 13.3137 12.6863 16 16 16C19.3137 16 22 13.3137 22 10C22 6.68629 19.3137 4 16 4Z" fill="#4F46E5"/>
+  <path d="M24 20C24 17.7909 22.2091 16 20 16H12C9.79086 16 8 17.7909 8 20V24C8 26.2091 9.79086 28 12 28H20C22.2091 28 24 26.2091 24 24V20Z" fill="#4F46E5"/>
+  <!-- Ears -->
+  <path d="M10 8C10 8 8 6 6 8C4 10 6 12 8 12C10 12 12 10 10 8Z" fill="#4F46E5"/>
+  <path d="M22 8C22 8 24 6 26 8C28 10 26 12 24 12C22 12 20 10 22 8Z" fill="#4F46E5"/>
+  <!-- Eyes -->
+  <circle cx="13" cy="10" r="1" fill="white"/>
+  <circle cx="19" cy="10" r="1" fill="white"/>
+  <!-- Nose -->
+  <path d="M16 12C16 12 15 13 16 14C17 13 16 12 16 12Z" fill="white"/>
+</svg> 
