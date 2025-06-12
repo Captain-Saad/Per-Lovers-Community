@@ -1,4 +1,5 @@
-import { useState, useContext, useEffect } from 'react';
+// Temporary comment to force re-compilation
+import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
