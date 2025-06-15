@@ -122,6 +122,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Captain-Saad - bsai23011@itu.edu.pk
+Captain-Saad - bsai23011@itu.edu.pk  
+Shamoon Asad - bsai23063@itu.edu.pk  
+Danyal Ali - bsai23051@itu.edu.pk
 
 Project Link: [https://github.com/Captain-Saad/Pet-Lovers-Community](https://github.com/Captain-Saad/Pet-Lovers-Community) 
