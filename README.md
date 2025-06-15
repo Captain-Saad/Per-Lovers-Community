@@ -122,6 +122,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+Captain-Saad - bsai23011@itu.edu.pk
 
-Project Link: [https://github.com/yourusername/pet-lovers-community](https://github.com/yourusername/pet-lovers-community) 
+Project Link: [https://github.com/Captain-Saad/Pet-Lovers-Community](https://github.com/Captain-Saad/Pet-Lovers-Community) 
