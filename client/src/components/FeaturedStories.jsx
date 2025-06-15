@@ -57,6 +57,9 @@ const FeaturedStories = () => {
               )}
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{post.title}</h3>
+                <p className="text-sm text-gray-500 mb-3">
+                  Posted by <span className="font-medium text-blue-600">{post.author?.username || 'Anonymous'}</span>
+                </p>
                 <p className="text-gray-600 mb-4">
                   {expandedPost === post._id 
                     ? post.description 

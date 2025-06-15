@@ -26,10 +26,10 @@ const App = () => {
 
   return (
     <Router key={user ? user._id : 'logged-out'}>
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen bg-gray-100 flex flex-col">
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
-        <Routes>
+        <main className="flex-grow container mx-auto px-4 py-8 max-w-7xl w-full">
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pets" element={<Pets key={user?._id || 'logged-out'} />} />
             <Route path="/about" element={<AboutUs />} />
@@ -53,7 +53,7 @@ const App = () => {
               path="/register"
               element={!user ? <Register /> : <Navigate to="/" replace />}
             />
-        </Routes>
+          </Routes>
         </main>
       </div>
     </Router>

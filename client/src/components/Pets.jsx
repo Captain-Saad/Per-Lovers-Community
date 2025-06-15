@@ -267,14 +267,48 @@ const Pets = () => {
                   />
                 )}
                 <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">{post.title}</h3>
+                      <p className="text-sm text-gray-500">
+                        Posted by <span className="font-medium text-blue-600">{post.author?.username || 'Anonymous'}</span>
+                      </p>
+                    </div>
+                    {user && post.author?._id === user._id && (
+                      <button
+                        onClick={() => handleDeletePost(post._id)}
+                        className="text-red-500 hover:text-red-700"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                  
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-xl font-bold text-gray-900">{post.title}</h3>
                     <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-semibold">
                       {post.petType} - {post.breed}
                     </span>
                   </div>
-                  
-                  <p className="text-gray-700 text-sm mb-4 line-clamp-3">{post.description}</p>
+
+                  <div className="mb-4">
+                    <p className="text-gray-600">
+                      {expandedPost === post._id 
+                        ? post.description 
+                        : post.description && post.description.length > 150 
+                          ? `${post.description.substring(0, 150)}...` 
+                          : post.description}
+                    </p>
+                    {post.description && post.description.length > 150 && (
+                      <button
+                        onClick={() => handleReadMore(post._id)}
+                        className="text-blue-600 hover:text-blue-800 font-medium mt-2 focus:outline-none"
+                      >
+                        {expandedPost === post._id ? 'Show Less' : 'Read More'}
+                      </button>
+                    )}
+                  </div>
                   
                   <div className="flex items-center text-gray-500 text-xs mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -317,18 +351,6 @@ const Pets = () => {
                         </svg>
                       </button>
                     </div>
-                    {(console.log('Delete button condition check:', { user, postAuthor: post.author, userId: user?._id, postAuthorId: post.author?._id }),
-                    user && user._id && post.author && post.author._id && post.author._id.toString() === user._id.toString()) && (
-                      <button
-                        onClick={() => handleDeletePost(post._id)}
-                        className="text-red-500 hover:text-red-700 p-2 rounded-full transition-colors duration-200 ml-auto hover:bg-red-100"
-                        title="Delete Post"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-                        </svg>
-                      </button>
-                    )}
                   </div>
 
                   {expandedPost === post._id && (

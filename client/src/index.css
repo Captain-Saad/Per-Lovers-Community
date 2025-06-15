@@ -16,6 +16,10 @@
   font-weight: 400;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-bg: #111827;
